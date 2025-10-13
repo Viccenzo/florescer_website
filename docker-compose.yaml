@@ -1,0 +1,9 @@
+services:
+  site-vue:
+    image: nginx:alpine
+    container_name: site-vue
+    ports:
+      - "8123:80"               # expõe a porta para o Proxy Manager enxergar
+    volumes:
+      - ./dist:/usr/share/nginx/html:ro   # monta os arquivos estáticos
+    restart: unless-stopped
