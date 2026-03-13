@@ -19,8 +19,10 @@ import SiteFooter from './components/SiteFooter.vue'
       <InstructionSection />
       <div class="section-divider" aria-hidden="true"></div>
       <MapSection />
+      <!--
       <div class="section-divider" aria-hidden="true"></div>
       <ValuesSection />
+      -->
     </main>
     <SiteFooter />
   </div>

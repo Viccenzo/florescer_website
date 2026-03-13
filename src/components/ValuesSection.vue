@@ -1,6 +1,6 @@
 <script setup>
-const whatsappLink = 'https://wa.me/48988100093'
 import ValoresImage from '../assets/valores.svg'
+import { whatsappUrl } from '../config/socialLinks'
 </script>
 
 <template>
@@ -8,7 +8,7 @@ import ValoresImage from '../assets/valores.svg'
     <div class="values__wrapper">
       <h2 class="values__title">Valores</h2>
       <img class="values__image" :src="ValoresImage" alt="Nossos valores representados visualmente" />
-      <a class="values__cta" :href="whatsappLink" target="_blank" rel="noopener noreferrer">
+      <a class="values__cta" :href="whatsappUrl" target="_blank" rel="noopener noreferrer">
         Entre em Contato!
       </a>
     </div>

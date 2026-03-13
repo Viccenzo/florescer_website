@@ -3,6 +3,7 @@ import LogoVetor from '../assets/LogoVetor.svg'
 import InstagramIcon from '../assets/Insta.svg'
 import WhatsappIcon from '../assets/Whatsapp.svg'
 import GoogleMapsIcon from '../assets/google-maps.png'
+import { instagramUrl, whatsappUrl, googleMapsUrl } from '../config/socialLinks'
 </script>
 
 <template>
@@ -14,7 +15,7 @@ import GoogleMapsIcon from '../assets/google-maps.png'
       <div class="nav-actions">
         <a
           class="nav-social"
-          href="https://www.instagram.com/florescerequitacaoludica/"
+          :href="instagramUrl"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram Florescer Equitação Lúdica"
@@ -23,7 +24,7 @@ import GoogleMapsIcon from '../assets/google-maps.png'
         </a>
         <a
           class="nav-social"
-          href="https://wa.me/48988100093"
+          :href="whatsappUrl"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Conversar no WhatsApp"
@@ -32,7 +33,7 @@ import GoogleMapsIcon from '../assets/google-maps.png'
         </a>
         <a
           class="nav-social"
-          href="https://maps.app.goo.gl/BYiorq7TkdKVEY928"
+          :href="googleMapsUrl"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Ver localização no Google Maps"
@@ -59,9 +60,9 @@ import GoogleMapsIcon from '../assets/google-maps.png'
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  max-width: 1120px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0.7rem 1.8rem 2.2rem;
+  padding: 1.4rem 1.8rem 1.4rem;
   gap: 2rem;
 }
 
@@ -116,7 +117,7 @@ import GoogleMapsIcon from '../assets/google-maps.png'
 
 @media (max-width: 768px) {
   .main-nav {
-    padding: 0.6rem 1.5rem 1.8rem;
+    padding: 1.4rem 1.5rem 1.4rem;
   }
 
   .nav-logo {
@@ -133,31 +134,37 @@ import GoogleMapsIcon from '../assets/google-maps.png'
 
 @media (max-width: 540px) {
   .main-nav {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    padding: 1.2rem 1.25rem 1.6rem;
-    gap: 1.1rem;
+    justify-content: space-between;
+    width: 80%;
+    padding: 1rem 1.25rem;
+    gap: 1rem;
   }
 
   .nav-logo {
     position: static;
     transform: none;
-    width: 82px;
-    height: 82px;
+    width: 74px;
+    height: 74px;
     border-width: 4px;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .nav-logo__image {
+    height: 44px;
   }
 
   .nav-actions {
-    justify-content: center;
+    justify-content: flex-end;
     width: auto;
-    gap: 0.75rem;
+    gap: 0.65rem;
   }
 
   .nav-social {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
   }
 }
 

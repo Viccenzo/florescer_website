@@ -1,8 +1,6 @@
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
-
-const mapEmbedUrl =
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4198.248656029188!2d-48.515203299999996!3d-27.4926571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952747bfb17cdddd%3A0xf7b0eebd53c46c9!2zSMOtcGljYSBGbG9yZXNjZXIgRXF1aXRhw6fDo28!5e1!3m2!1spt-BR!2sbr!4v1760028384093!5m2!1spt-BR!2sbr'
+import { googleMapsEmbedUrl } from '../config/socialLinks'
 
 const carouselImports = import.meta.glob('../assets/carrossel/*.{png,jpg,jpeg,svg,webp}', {
   eager: true,
@@ -116,7 +114,7 @@ onBeforeUnmount(() => {
       </p>
       <div class="map-section__frame">
         <iframe
-          :src="mapEmbedUrl"
+          :src="googleMapsEmbedUrl"
           title="Localização Florescer Equitação Lúdica no Google Maps"
           loading="lazy"
           allowfullscreen

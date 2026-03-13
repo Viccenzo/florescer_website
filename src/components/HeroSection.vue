@@ -1,12 +1,12 @@
 <script setup>
-const whatsappLink = 'https://wa.me/48988100093'
 import HeroImage from '../assets/img_init_3.svg'
+import { whatsappUrl } from '../config/socialLinks'
 </script>
 
 <template>
   <section class="hero-section" id="inicio">
     <img class="hero-section__image" :src="HeroImage" alt="Crianças se divertindo com cavalos na aula de equitação" />
-    <a class="hero-section__cta" :href="whatsappLink" target="_blank" rel="noopener noreferrer">
+    <a class="hero-section__cta" :href="whatsappUrl" target="_blank" rel="noopener noreferrer">
       Entre em Contato!
     </a>
   </section>

@@ -92,7 +92,7 @@ import LaisVideo from '../assets/lais.mp4'
   }
 
   .instruction__video {
-    width: 100%;
+    width: 60%%;
     max-width: none;
   }
 }
